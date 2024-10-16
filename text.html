@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click to Show Cards</title>
+  <style>
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      margin-top: 20px;
+      width: 300px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .card-body {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="showCard('card1')">Button 1</button>
+  <button onclick="showCard('card2')">Button 2</button>
+  <button onclick="showCard('card3')">Button 3</button>
+  <button onclick="showCard('card4')">Button 4</button>
+
+  <div class="content" id="content">
+    <p>Click a button to display a card here.</p>
+  </div>
+
+  <script>
+    function showCard(cardId) {
+      const content = document.getElementById('content');
+      const cardMap = {
+        card1: `
+          <div class="card">
+            <div class="card-title">Card Title 1</div>
+            <div class="card-body">
+              This is the content for Card 1. It has more detailed information and looks like a card.
+            </div>
+          </div>
+        `,
+        card2: `
+          <div class="card">
+            <div class="card-title">Card Title 2</div>
+            <div class="card-body">
+              This is the content for Card 2. It shows different information.
+            </div>
+          </div>
+        `,
+        card3: `
+          <div class="card">
+            <div class="card-title">Card Title 3</div>
+            <div class="card-body">
+              Here is the content for Card 3. You can add images, buttons, or any other HTML elements inside.
+            </div>
+          </div>
+        `,
+        card4: `
+          <div class="card">
+            <div class="card-title">Card Title 4</div>
+            <div class="card-body">
+              This is the content for Card 4. Customize this area with whatever content you need.
+            </div>
+          </div>
+        `,
+      };
+
+      content.innerHTML = cardMap[cardId] || '<p>No content available.</p>';
+    }
+  </script>
+</body>
+</html>
