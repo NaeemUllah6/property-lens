@@ -28,6 +28,9 @@ figure {
   padding: 0;
   list-style: none;
 }
+a{
+  cursor: pointer !important;
+}
 
 .main_p {
   font-family: Poppins;
@@ -48,53 +51,201 @@ figure {
   text-align: left;
 }
 
+.bg_saturated {
+  background-color: #000000;
+}
+
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+  height: 100px;
+}
+
 nav {
-  height: 90px;
+ height: 100px;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  align-items:center;
+  justify-content: center;
   display: flex;
-  align-items: center;
 }
 
 nav .nav-link {
-  text-decoration: none;
-  list-style: none;
-  color: #344054;
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   text-align: center;
+  color:#344054;
+}
+.nav-special{
+color:#1DB3B3 !important;
+font-family: Poppins;
+font-size: 18px;
+font-weight: 700 !important;
+line-height: 28px;
+text-align: center;
+
 }
 
-nav .navbar-flex {
-  gap: 94px;
-}
-
-.navbar {
-  padding: 0 40px;
-  width: 100%;
-}
-
-.navbar button {
-  padding: 12 20px;
-}
-
-.navbar .btn1 {
-  border: 1px solid #D0D5DD;
-  color: #344054;
-}
-
-.navbar .btn2 {
-  background-color: #1DB3B3;
+nav .hero-btn {
   color: white;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #1DB3B3;
+  padding: 12px 18.822px;
+  border: none;
 }
 
-.navbar .nav-link:hover {
-  color: #1DB3B3;
+nav .hero-btn:hover {
+  color: white;
+  background-color: #278888;
+}
+nav .hero-btn1:hover {
+  color: white;
+  background-color: #1DB3B3;
 }
 
-@media (max-width:768px) {
-  nav .navbar-flex {
-    gap: 0px;
+nav .hero-btn1 {
+  color: #22739C;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  border-radius:8px;
+  width: 102px;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+.hero-btn {
+  display: flex;
+  color: white;
+  font-weight: 700;
+  padding: 10px 28px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 58.82px;
+  border: 2.353px solid #0B608B;
+  background: #22739C;
+  font-family: DM Sans;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.menu1 {
+  display: block;
+  display: flex;
+}
+
+.loginbuttons {
+  display: block;
+}
+
+.paddingspecial2 {
+  padding: 88px 0;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+      display: block;
+      flex-direction: column;
+      text-align: center;
+      background-color: hsl(212.37deg 62.23% 21.67% / 83%);
+      padding-top: 20px;
+      position: absolute;
+      top: 10;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      height: 0;
+
+      overflow: hidden;
+
+      transition: height 1s ease, opacity 1s ease;
+      opacity: 0;
+  }
+  .loginbuttons{
+    display: none !important;
+  }
+  .main_heading {
+      max-width: 653px;
+      margin: 0 auto;
+  }
+
+  .loginbuttons {
+      display: none;
+  }
+
+  .navbar-toggler {
+      display: block;
+  }
+
+  .menu1 {
+      display: none;
+  }
+
+  .navbar-collapse.active {
+      height: fit-content;
+      opacity: 1;
+  }
+
+  .navbar-toggler {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+  }
+
+  .navbar-toggler-icon {
+      background-color: #22739C;
+      width: 30px;
+      height: 3px;
+      position: relative;
+      display: block;
+      transition: all 1s;
+  }
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+      content: '';
+      background-color: #080a0b;
+      width: 30px;
+      height: 3px;
+      position: absolute;
+  }
+
+  .navbar-toggler-icon::before {
+      top: -8px;
+  }
+
+  .navbar-toggler-icon::after {
+      bottom: -8px;
+  }
+
+  .navbar-collapse a {
+      padding: 10px 0;
+      display: block;
+      color: white;
+  }
+
+  .navbar-collapse a:hover {
+      color: #22739C;
+  }
+
+  .navbar-collapse .btn {
+      margin: 10px 0;
+  }
+  .nav-link{
+      text-decoration: none;
   }
 }
 
@@ -546,7 +697,45 @@ textarea {
 .contactus form textarea:focus{
   outline: none;
 }
-
+/* --------------------------------Footer-------------------------------- */
+.footer{
+  padding: 60px 0;
+  background-color:black
+}
+.footer .text1{
+  font-family: Lato;
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+text-align: left;
+color:white;
+padding: 25px 0;
+}
+.footer .footer-heading{
+  font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color:white;
+}
+.footer ul li a{
+text-decoration: none;
+font-family: Poppins;
+font-size: 14px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color:white;
+}
+.footer ul li{
+  padding-top: 16px ;
+}
+.footer-contact-div{
+  padding: 12px;
+background-color:#363636;
+border-radius:12px;
+}
 
 
 
@@ -589,6 +778,9 @@ textarea {
     font-size: 50px;
     line-height: 60px;
   }
+  .hero-bg{
+    background-size:cover;
+  }
 }
 
 /* -------------------------------for 768px--------------------------------- */
@@ -598,6 +790,9 @@ textarea {
     max-width: fit-content !important;
     height: 100% !important;
     gap: 11px;
+  }
+  .hero-bg{
+    background-size:cover;
   }
 
   .inputs .location-input,
@@ -630,7 +825,7 @@ textarea {
 
   .hero-heading {
     max-width: 100%;
-    height: 60vh;
+    height: 50vh;
   }
 
   .hero-bg .hero-heading p {
@@ -749,6 +944,40 @@ textarea {
   }
   .main_p{
     line-height:28px;
+  }
+  .contact-button-div{
+    justify-content: left !important;
+  }
+  .contactus form button{
+    margin-top: 15px;
+  }
+  .contactus{
+    padding: 40px 0;
+  }
+  .services{
+  padding: 40px 0;
+  }
+  .services .strategy, .strategy1{
+    padding: 0 20px !important;
+  }
+  .contactus .buttons{
+    padding: 20px 15px;
+  }
+  .contactus .main-heading, .services .heading{
+    padding-bottom: 20px;
+    text-align: left !important;
+  }
+  .nav-tabs li{
+    flex: 1;
+  }
+  .nav-tabs button{
+    width: 100%;
+  }
+  .hero-bg{
+    background-size:cover;
+  }
+  nav{
+    height: 60px;
   }
 }
 

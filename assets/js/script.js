@@ -45,3 +45,23 @@
         // Update the innerHTML of the content div with the appropriate content
         content.innerHTML = contentMap[contentId] || '<p>No content available.</p>';
     }
+    // --------------------script for navbar--------------------
+    document.querySelector('.navbar-toggler').addEventListener('click', function () {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        navbarCollapse.classList.toggle('active');
+    });
+
+
+    document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
+        link.addEventListener('click', function () {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('active')) {
+                navbarCollapse.classList.remove('active');
+            }
+
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: true
+            });
+            bsCollapse.hide();
+        });
+    });

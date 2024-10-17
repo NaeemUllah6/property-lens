@@ -1,77 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button Click to Show Cards</title>
-  <style>
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 16px;
-      margin-top: 20px;
-      width: 300px;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg_saturated {
+    background-color: #22739C;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+}
+
+nav .nav-link {
+    color: #0F172A;
+    font-family: "DM Sans";
+    font-size: 18.822px;
+    font-weight: 500;
+}
+
+nav .hero-btn {
+    color: white;
+    font-family: "DM Sans";
+    font-size: 18.822px;
+    font-weight: 500;
+    border-radius: 58.82px;
+    border: 2.353px solid #22739C;
+    background-color: #22739C;
+    padding: 7px 18.822px;
+}
+.hero-btn1{
+    border-radius:'58px'
+}
+
+nav .hero-btn:hover {
+    color: white;
+    background-color: #3e86aa;
+}
+
+nav .hero-btn1 {
+    color: #22739C;
+    font-family: "DM Sans";
+    font-size: 18.822px;
+    font-weight: 500;
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+.hero-btn {
+    display: flex;
+    color: white;
+    font-weight: 700;
+    padding: 10px 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 58.82px;
+    border: 2.353px solid #0B608B;
+    background: #22739C;
+    font-family: DM Sans;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.menu1 {
+    display: block;
+    display: flex;
+}
+
+.loginbuttons {
+    display: block;
+}
+
+.paddingspecial2 {
+    padding: 88px 0;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        background-color: hsl(212.37deg 62.23% 21.67% / 83%);
+        padding-top: 20px;
+        position: absolute;
+        top: 10;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        height: 0;
+
+        overflow: hidden;
+
+        transition: height 1s ease, opacity 1s ease;
+        opacity: 0;
     }
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: bold;
+
+    .main_heading {
+        max-width: 653px;
+        margin: 0 auto;
     }
-    .card-body {
-      margin-top: 10px;
+
+    .loginbuttons {
+        display: none;
     }
-  </style>
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .menu1 {
+        display: none;
+    }
+
+    .navbar-collapse.active {
+        height: fit-content;
+        opacity: 1;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #22739C;
+        width: 30px;
+        height: 3px;
+        position: relative;
+        display: block;
+        transition: all 1s;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: '';
+        background-color: #080a0b;
+        width: 30px;
+        height: 3px;
+        position: absolute;
+    }
+
+    .navbar-toggler-icon::before {
+        top: -8px;
+    }
+
+    .navbar-toggler-icon::after {
+        bottom: -8px;
+    }
+
+    .navbar-collapse a {
+        padding: 10px 0;
+        display: block;
+        color: white;
+    }
+
+    .navbar-collapse a:hover {
+        color: #22739C;
+    }
+
+    .navbar-collapse .btn {
+        margin: 10px 0;
+    }
+    .nav-link{
+        text-decoration: none;
+    }
+}
+    </style>
 </head>
 <body>
-  <button onclick="showCard('card1')">Button 1</button>
-  <button onclick="showCard('card2')">Button 2</button>
-  <button onclick="showCard('card3')">Button 3</button>
-  <button onclick="showCard('card4')">Button 4</button>
+    <nav class="bg-white">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center p-2">
+                <div>
+                    <a href="/">
+                        <img class="headerimg" src="./assets/images/icons/headerlogo.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="menu1 justify-content-center align-items-center flex-grow-1">
+                    <div class="d-flex gap-4">
+                        <a class="nav-link" href="#about">About Us</a>
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                        <a class="nav-link" href="#testimonial">Testimonial</a>
+                        <a class="nav-link" href="#contactus">Contact Us</a>
+                    </div>
+                </div>
+                <div class="loginbuttons">
+                    <button class="btn hero-btn1">Login</button>
+                    <a href="#signup"> <button class="btn hero-btn bg_saturated">Signup</button></a>
+                </div>
+                <div>
+                    <i src="./assets/images/menu.svg" class="navbar-toggler fa fa-bars" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation"></i>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse bg-info" id="navbarNav">
+                <div class="d-flex flex-column align-items-center">
+                    <a class="nav-link" href="#about">About Us</a>
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                    <a class="nav-link" href="#testimonial">Testimonial</a>
+                    <a class="nav-link" href="#contactus">Contact Us</a>
+                    <button class="btn hero-btn1">Login</button>
+                    <a href="#signup"><button class="btn hero-btn bg_saturated nav-link text-decoration-none">Signup</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
 
-  <div class="content" id="content">
-    <p>Click a button to display a card here.</p>
-  </div>
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            navbarCollapse.classList.toggle('active');
+        });
 
-  <script>
-    function showCard(cardId) {
-      const content = document.getElementById('content');
-      const cardMap = {
-        card1: `
-          <div class="card">
-            <div class="card-title">Card Title 1</div>
-            <div class="card-body">
-              This is the content for Card 1. It has more detailed information and looks like a card.
-            </div>
-          </div>
-        `,
-        card2: `
-          <div class="card">
-            <div class="card-title">Card Title 2</div>
-            <div class="card-body">
-              This is the content for Card 2. It shows different information.
-            </div>
-          </div>
-        `,
-        card3: `
-          <div class="card">
-            <div class="card-title">Card Title 3</div>
-            <div class="card-body">
-              Here is the content for Card 3. You can add images, buttons, or any other HTML elements inside.
-            </div>
-          </div>
-        `,
-        card4: `
-          <div class="card">
-            <div class="card-title">Card Title 4</div>
-            <div class="card-body">
-              This is the content for Card 4. Customize this area with whatever content you need.
-            </div>
-          </div>
-        `,
-      };
 
-      content.innerHTML = cardMap[cardId] || '<p>No content available.</p>';
-    }
-  </script>
+        document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
+            link.addEventListener('click', function () {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('active')) {
+                    navbarCollapse.classList.remove('active');
+                }
+
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: true
+                });
+                bsCollapse.hide();
+            });
+        });
+    </script>
 </body>
 </html>
