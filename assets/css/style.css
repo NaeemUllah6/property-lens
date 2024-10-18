@@ -842,6 +842,10 @@ textarea {
 .accordion-button:not(.collapsed)::after {
   background-image: none;
 }
+.accordion-button{
+  padding-left:0px !important;
+  padding-right:0px !important;
+}
 
 .second-card {
   padding: 18px;
@@ -894,7 +898,6 @@ font-size: 12px;
 font-weight: 400;
 line-height: 18px;
 text-align: left;
-
 }
 
 
@@ -910,6 +913,23 @@ text-align: left;
 @media(max-width:1280px) {
   .hero-bg .inputs {
     height: 78px;
+  }
+  .second-card h3 {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+  }
+  .second-card .price-p{
+    font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  }
+  .second-card p{
+    font-size: 14px;
   }
 }
 
@@ -1163,6 +1183,15 @@ text-align: left;
   }
   .properties-cards{
     padding-top: 0px;
+  }
+  .second-card p{
+    font-size: 12px;
+  }
+  .second-card h2{
+    font-size: 23px;
+  }
+  .properties-cards{
+    padding: 0 20px;
   }
 }
 
