@@ -961,7 +961,7 @@ text-align: left;
 text-decoration: none;
 color:#1DB3B3;
 }
-.login form .button{
+.login form .button, button{
 padding: 10px  10px;
 background-color:#1DB3B3;
 border-radius: 8px;
@@ -975,7 +975,7 @@ line-height: 24px;
 color:white;
 text-align: center;
 }
-.login form button:hover{
+.login form .buttofn:hover{
   color:white;
   background-color:#0d7b7b;
 }
@@ -987,7 +987,11 @@ line-height: 20px;
 text-align: left;
 color:#475467;
 }
-
+.login-main{
+  padding : 174px 0px;
+  margin: 0 auto;
+  max-width: 360px;
+}
 
 
 
@@ -1293,6 +1297,19 @@ color:#475467;
   .login-container{
     padding: 0 20px;
   }
+  .login-main{
+    padding : 40px 0;
+  }
+  .login-inputs h2{
+    padding: 25px 0;
+  }
+  .remember{
+    padding: 5px 0 !important;
+  }
+  .Forgot{
+    padding: 10px 0;
+  }
+  
 }
 
 /* -------------------------------for 375px--------------------------------- */
