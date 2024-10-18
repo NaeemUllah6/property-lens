@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---------------------- Bootstrap Cdn---------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ------------------font-awesome------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- --css-- -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Property Lense</title>
+</head>
+
+<body>
+    <!-- ..............................Navbar................................. -->
+    <nav class="bg-white">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center p-2 w-100">
+                <div class="d-flex justify-content-between gap-5">
+                    <a href="/">
+                        <img class="headerimg" src="./assets/images/icons/headerlogo.svg" alt="Logo">
+                    </a>
+                    <div class="menu1 justify-content-center align-items-center flex-grow-1">
+                        <div class="d-flex gap-1">
+                            <a class="nav-link nav-special" href="/">Home</a>
+                            <a class="nav-link" href="./pages/properties.html">Properties</a>
+                            <a class="nav-link" href="#testimonial">About</a>
+                            <a class="nav-link" href="#contactus">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loginbuttons d-flex gap-3 float-right ms-auto">
+                    <a href="./pages/login.html" class="btn hero-btn1 border">LOGIN</a>
+                    <a class="btn hero-btn bg_saturated" href="./pages/signup.html">Signup</a>
+                </div>
+                <div>
+                    <i src="./assets/images/menu.svg" class="navbar-toggler fa fa-bars" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false" aria-label="Toggle navigation"></i>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse bg-info" id="navbarNav">
+                <div class="d-flex flex-column align-items-center">
+                    <a class="nav-link" href="#about">Home</a>
+                    <a class="nav-link" href="./pages/properties.html">Properties</a>
+                    <a class="nav-link" href="#testimonial">About Us</a>
+                    <a class="nav-link" href="#contactus">Contact Us</a>
+                    <button class="btn hero-btn1"><a href="">Login</a></button>
+                    <button class="btn hero-btn bg_saturated nav-link text-decoration-none">Signup</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- -----------------------Hero ---------------------- -->
+    <section class="Hero">
+        <div class="hero-bg">
+            <div class="container">
+                <div class="d-flex flex-column gap-4 justify-content-end hero-heading">
+                    <div>
+                        <h2>Discovering
+                            Quality Properties
+                        </h2>
+                        <p class="md-mt-4"> Find your perfect home, Explore the finest
+                            properties with us
+                        </p>
+                    </div>
+                    <div class="rounded">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item " role="presentation">
+                                <button class="nav-link active nav-item1" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">All</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                            </li>
+                            <li class="nav-item " role="presentation">
+                                <button class="nav-link nav-item-2" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <div class="d-flex flex-column gap-1 location-input">
+                        <label for="1">Location</label>
+                        <input type="text" placeholder="Enter Your Name" placeholder="Select your city">
+                    </div>
+                    <div class="d-flex flex-column gap-1 search-input ms-5">
+                        <label for="2">Search</label>
+                        <input type="text" placeholder="Enter Your Name" placeholder="Property Name">
+                    </div>
+                    <div>
+                        <div class="position-relative button response ms-5">
+                            <button>
+                                Search
+                            </button>
+                            <div class="position-absolute translate-middle search-icon">
+                                <img src="assets/images/icons/searchicon.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------who we?----------------------- -->
+    <section class="aboutus">
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-3">
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex flex-column gap-2" style="max-width: 611px;">
+                        <p class="about-text">WHO ARE WE</p>
+                        <h2>Together we will accelerate your success</h2>
+                        <p class="about-sub-text">We are at the interface of real estate expertise and digitalization.
+                            We combine industry
+                            knowledge with modern technology solutions to successfully lead companies in the real estate
+                            industry into the digital future.
+                        </p>
+                        <button class="about-btn response">
+                            OUR SERVICES
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img class="img-fluid w-100" src="assets/images/house 2.svg" alt="about image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------idea------------------------- -->
+    <section class="idea">
+        <div class="idea-content">
+            <div class="container">
+                <div class="d-flex flex-column gap-2">
+                    <p class="idea-text1">From idea to implementation</p>
+                    <h2>
+                        Four pillars of your digital success
+                    </h2>
+                    <p class="idea-text2">
+                        Take a look at our wide range of featured properties. We provide the best and quality housing
+                        and Hotels at very affordable prices for you and your family
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="d-flex flex-column gap-3">
+                                <img style="width: 54px;height: 54px;" src="assets/images/icons/strategy.svg" alt="">
+                                <h2>Strategy</h2>
+                                <p class="card-text">Strategische Planung und Konzeption für digitale Transformation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card" style="background-color: black; border:1.5px solid #4A4A4A">
+                            <div class="d-flex flex-column gap-3">
+                                <img style="width: 54px;height: 54px;" src="assets/images/icons/solution.svg" alt="">
+                                <h2>solution</h2>
+                                <p class="card-text">Strategische Planung und Konzeption für digitale Transformation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card" style="background-color: black; border:1.5px solid #4A4A4A">
+                            <div class="d-flex flex-column gap-3">
+                                <img style="width: 54px;height: 54px;" src="assets/images/icons/implementation.svg"
+                                    alt="">
+                                <h2>implementation</h2>
+                                <p class="card-text">Strategische Planung und Konzeption für digitale Transformation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card" style="background-color: black; border:1.5px solid #4A4A4A">
+                            <div class="d-flex flex-column gap-3">
+                                <img style="width: 54px;height: 54px;" src="assets/images/icons/support.svg" alt="">
+                                <h2>Support</h2>
+                                <p class="card-text">Strategische Planung und Konzeption für digitale Transformation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------------------change--------------------- -->
+    <section class="change">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-12 col-lg-6 ">
+                    <div class="d-flex flex-column gap-4">
+                        <div>
+                            <p class="main_p">
+                                Drive for digital change
+                            </p>
+                            <h2 class="main-heading">
+                                Our Identity And Our Pursuit of Excellence
+                            </h2>
+                        </div>
+                        <div class="d-flex justify-content-start flex-md-nowrap flex-wrap align-items-center gap-2">
+                            <div style="background-color: #1DB3B3;"
+                                class="d-flex justify-content-center align-items-center small-button gap-1 btn response">
+                                <img class="img-fluid small-img" src="assets/images/icons/Home Property icon.png"
+                                    alt="">
+                                <p class="small-p text-white">Our Mission</p>
+                            </div>
+                            <div
+                                class="d-flex justify-content-center align-items-center small-button gap-1 btn response">
+                                <img class="img-fluid small-img" src="assets/images/icons/Vector.png" alt="">
+                                <p class="small-p">Our Vision</p>
+                            </div>
+                            <div
+                                class="d-flex justify-content-center align-items-center small-button gap-1 btn response">
+                                <img class="img-fluid small-img" src="assets/images/icons/Vector.png" alt="">
+                                <p class="small-p">Our Value</p>
+                            </div>
+                            <div
+                                class="d-flex justify-content-center align-items-center small-button gap-1 btn response">
+                                <img class="img-fluid small-img" src="assets/images/icons/Vector.png" alt="">
+                                <p class="small-p">About Us</p>
+                            </div>
+                        </div>
+                        <div class="main-paragraph">
+                            <p class="mian_p">
+                                Our mission is to support real estate companies in successfully managing digital change.
+                                We
+                                offer tailor-made solutions that meet market requirements while being future-proof.
+                            </p>
+                        </div>
+                        <button class="about-btn response">Read More...</button>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img class="img-fluid" src="assets/images/groupchange.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ------------------------services------------------------ -->
+    <section class="services">
+        <div class="container">
+            <div class="heading">
+                <p class="main_p text-center">Our range of services
+                </p>
+                <h2 class="main-heading text-center">
+                    Tailored solutions for every stage of your digital journey
+                </h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-3">
+                <div class="col-12 col-lg-6">
+                    <div class="services-card bg-white" id="content">
+                        <img class="img-fluid w-100" src="assets/images/Illustration Container.svg" alt="">
+                        <div class="card-heading">
+                            Future-oriented orientation
+                            <p class="card-text">
+                                Discover the ideal course for your company in the digital age. Together we will design a
+                                tailored strategy that aligns with your goals and meets ever-changing technology and
+                                market trends.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex flex-column gap-3">
+                        <button class="btn strategy1 d-flex align-items-center" onclick="showContent('content1')">
+                            <span class="bg-white special">
+                                01
+                            </span>
+                        </button>
+
+                        <button class="btn strategy d-flex align-items-center" onclick="showContent('content2')">
+                            <span>
+                                02
+                            </span>
+                        </button>
+
+                        <button class="btn strategy d-flex align-items-center" onclick="showContent('content3')">
+                            <span>
+                                03
+                            </span>
+                        </button>
+
+                        <button class="btn strategy d-flex align-items-center" onclick="showContent('content4')">
+                            <span>
+                                04
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------------------------contactus----------------------------- -->
+    <section class="contactus">
+        <div class="container">
+            <div>
+                <h2 class="main-heading text-center">
+                    We’d love to here from you.
+                </h2>
+            </div>
+            <a href="mailto:mail@realvation.de" class="text-decoration-none button-anchor">
+                <div class="btn d-flex gap-3 flex-wrap sm-nowrap justify-content-center align-items-center">
+                    <div class="buttons">
+                        <div class="d-flex align-items-center gap-1">
+                            <img class="img-fluid" src="assets/images/icons/mailing.svg" alt="">
+                            <p class="contact-button-text">mail@realvation.de</p>
+                        </div>
+                    </div>
+            </a>
+
+            <a class="text-decoration-none button-anchor" href="https://maps.app.goo.gl/vUXQinDtrqNTBEM16">
+                <div class="buttons">
+                    <div class="d-flex align-items-center gap-1">
+                        <img class="img-fluid" src="assets/images/icons/location.svg" alt="">
+                        <p class="contact-button-text">Berliner Str. 300b
+                            63065 Offenbach a.M.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="tel:+49 173 34 43 368" class="text-decoration-none button-anchor">
+                <div class="buttons">
+                    <div class="d-flex align-items-center gap-1">
+                        <img class="img-fluid" src="assets/images/icons/phone.svg" alt="">
+                        <p class="contact-button-text">+49 173 34 43 368</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <form action="">
+            <div class="row g-3">
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex flex-column gap-1">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                        </div>
+
+                        <div class="d-flex flex-column gap-1">
+                            <label for="">Email</label>
+                            <input type="text" placeholder="Enter Your Email">
+                        </div>
+
+                        <div class="d-flex flex-column gap-1">
+                            <label for="">Phone</label>
+                            <input type="text" placeholder="Enter Your Phone Number">
+                        </div>
+
+                        <div class="d-flex flex-column gap-1">
+                            <label for="">Company</label>
+                            <input type="text" placeholder="Enter Your Company Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex flex-column h-100 gap-1">
+                        <label for="">Message</label>
+                        <textarea class="h-100" name="" id="" placeholder="Your Message..."></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-center contact-button-div"> <button
+                    class="d-flex justify-content-center">SEND
+                    MESSAGE</button></div>
+        </form>
+        </div>
+    </section>
+    <!-- ----------------------------Footer------------------------------ -->
+    <section class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div style="max-width: 277px;">
+                        <a href="">
+                            <img class="img-fluid" src="assets/images/icons/footerlogo.svg" alt="Realvation">
+                        </a>
+                        <p class="text1">
+                            We are at the interface of real estate expertise and digitalization. We combine industry
+                            knowledge with modern technology solutions to successfully lead companies in the real estate
+                            industry into the digital future.
+                        </p>
+                        <a href="https:linkedin.com"><img src="assets/images/icons/linkedin.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-2">
+                    <h3 class="footer-heading">Menu</h3>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <h3 class="footer-heading">Company Name</h3>
+                    <ul>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Imprint</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul>
+                        <li><a class="footer-contact" href="">
+                                <div class="footer-contact-div">
+                                    <p>Email Address: <br> mail@realvation.de</p>
+                                </div>
+                            </a></li>
+                        <li><a class="footer-contact" href="">
+                                <div class="footer-contact-div">
+                                    <p>Phone Number:<br> +49 173 34 43 368</p>
+                                </div>
+                            </a></li>
+                        <li><a class="footer-contact" href="">
+                                <div class="footer-contact-div">
+                                    <p>Address: <br> Berliner Str. 300b, 63065 Offenbach am Main</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <script href="./assets/js/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

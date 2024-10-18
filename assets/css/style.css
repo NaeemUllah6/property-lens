@@ -134,6 +134,7 @@ nav .hero-btn1 {
   font-weight: 600;
   border-radius: 8px;
   width: 102px;
+  padding: 11px;
 }
 
 .navbar-collapse {
@@ -798,7 +799,7 @@ textarea {
   opacity: 0px;
   padding: 18px 24px;
   box-shadow: 0px 0px 18px 0px #0000001A;
-  height: fit-content ;
+  height: fit-content;
 }
 
 .properties-cards .property-cards .sticky-card .filter-labels {
@@ -842,9 +843,10 @@ textarea {
 .accordion-button:not(.collapsed)::after {
   background-image: none;
 }
-.accordion-button{
-  padding-left:0px !important;
-  padding-right:0px !important;
+
+.accordion-button {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .second-card {
@@ -889,15 +891,101 @@ textarea {
   line-height: 24px;
   text-align: left;
 }
-.second-card hr{
-  background-color:#E9E9E9; border:1px solid #d2d0d0; 
+
+.second-card hr {
+  background-color: #E9E9E9;
+  border: 1px solid #d2d0d0;
 }
-.second-card .price-p{
+
+.second-card .price-p {
   font-family: Poppins;
-font-size: 12px;
-font-weight: 400;
-line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+}
+
+/* -----------------------------------login screen-------------------------------- */
+.login-container {
+  padding: 0px 0px;
+}
+
+.login-inputs h2 {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  padding-top: 80px;
+}
+
+.login-inputs p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding-top: 12px;
+}
+
+.login form label {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #344054;
+}
+
+.login input {
+  padding: 10px 14px 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #D0D5DD;
+  opacity: 0px;
+}
+
+.login input::placeholder {
+  color: #667085;
+}
+
+.login form {
+  padding-top: 32px;
+}
+.login form a{
+  font-family: Poppins;
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
 text-align: left;
+text-decoration: none;
+color:#1DB3B3;
+}
+.login form .button{
+padding: 10px  10px;
+background-color:#1DB3B3;
+border-radius: 8px;
+border: 1px;
+opacity: 0px;
+width: 100%;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+color:white;
+text-align: center;
+}
+.login form button:hover{
+  color:white;
+  background-color:#0d7b7b;
+}
+.login form p{
+  font-family: Poppins;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+color:#475467;
 }
 
 
@@ -914,6 +1002,7 @@ text-align: left;
   .hero-bg .inputs {
     height: 78px;
   }
+
   .second-card h3 {
     font-family: Poppins;
     font-size: 14px;
@@ -921,14 +1010,16 @@ text-align: left;
     line-height: 24px;
     text-align: left;
   }
-  .second-card .price-p{
+
+  .second-card .price-p {
     font-family: Poppins;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
   }
-  .second-card p{
+
+  .second-card p {
     font-size: 14px;
   }
 }
@@ -1175,25 +1266,43 @@ text-align: left;
   nav {
     height: 60px;
   }
-  .properties-cards .property-cards{
+
+  .properties-cards .property-cards {
     grid-template-columns: 1fr;
   }
-  .sticky-card{
+
+  .sticky-card {
     position: static;
   }
-  .properties-cards{
+
+  .properties-cards {
     padding-top: 0px;
   }
-  .second-card p{
+
+  .second-card p {
     font-size: 12px;
   }
-  .second-card h2{
+
+  .second-card h2 {
     font-size: 23px;
   }
-  .properties-cards{
+
+  .properties-cards {
+    padding: 0 20px;
+  }
+  .login-container{
     padding: 0 20px;
   }
 }
 
 /* -------------------------------for 375px--------------------------------- */
-@media(max-width:375px) {}
+@media(max-width:375px) {
+  .second-card h2 {
+    font-size: 21px;
+  }
+
+  .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-link {
+    padding: 8px 13.7px;
+  }
+}
