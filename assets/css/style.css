@@ -961,7 +961,7 @@ text-align: left;
 text-decoration: none;
 color:#1DB3B3;
 }
-.login form .button, button{
+.login form button{
 padding: 10px  10px;
 background-color:#1DB3B3;
 border-radius: 8px;
@@ -975,7 +975,7 @@ line-height: 24px;
 color:white;
 text-align: center;
 }
-.login form .buttofn:hover{
+.login form button:hover{
   color:white;
   background-color:#0d7b7b;
 }
